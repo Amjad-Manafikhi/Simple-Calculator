@@ -1,0 +1,268 @@
+html{
+    box-sizing:border-box;
+    background-color:var(--pri-html-color);;
+}
+#all{
+    display: flex;
+    margin: auto;
+    width: 400px;
+    height: auto;
+    flex-direction: column;
+
+    
+}
+#name{
+    margin:10px;
+    color:var(--pri-name-color);
+    font-weight: 900;
+
+}
+#result{
+    width: 94%;
+    border-radius: 7px ;
+    height: 70px;
+    background-color:var(--pri-result-color);;
+    margin:10px;
+}
+#buttons{
+    display:flex;
+    width:94%;
+    flex-wrap:wrap;
+    border-radius:7px;
+    margin: 10px;
+    background-color:var(--pri-buttons-color);
+
+}
+#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8,#b9,#b0,#bDEL,#bRESET,#bplus,#bminus,#bmul,#bdiv,#beq,#bdot{
+    width:15%;
+    height:50px;
+    margin:10px; 
+    flex-grow:1;
+    border:0px;
+    border-radius:7px;
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(165, 165, 165, 1);
+    -moz-box-shadow: 0px 2px 0px 0px rgba(165, 165, 165, 1);
+    box-shadow: 0px 2px 0px 0px rgba(165, 165, 165, 1);
+    color:rgb(80,83,94);
+    font-weight: 900;
+    font-size: 18px;
+    background-color:var(--pri-butt-color);
+    cursor:pointer;
+    
+} 
+#beq{
+    background-color:var(--pri-eq-color);
+    color:rgb(253,255,255);
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(148, 39, 27, 1);
+    -moz-box-shadow: 0px 2px 0px 0px rgba(148, 39, 27, 1);
+    box-shadow: 0px 2px 0px 0px rgba(148, 39, 27, 1);
+}
+#bRESET, #bDEL{
+    background-color:var(--pri-del-color);
+    color:rgb(253,255,255);
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(66, 78, 115, 1);
+    -moz-box-shadow: 0px 2px 0px 0px rgba(66, 78, 115, 1);
+    box-shadow: 0px 2px 0px 0px rgba(66, 78, 115, 1);
+    
+}
+#result{
+    display:flex;
+    flex-direction:row-reverse;
+}
+#sum{
+     color:var(--pri-sum-color);
+     margin: 10px;
+     
+     font-weight: 900;
+     font-size: 24px;
+     
+    }
+    #top{
+        display:flex;
+        
+    }
+    .toggle{
+        visibility: hidden;
+    }
+    .label{
+        background-color:lightgray;
+        width:50px;
+        height:20px;
+        border-radius:50px;
+        cursor:pointer; 
+        position:absolute;
+        margin-top:10px;
+        margin-left:335px;
+    }
+    .toggle:checked +.label{
+        background-color:green;
+    }
+    .ball{
+        width:20px;
+        height:20px;
+        border-radius:50px;
+        background-color:white;
+        animation: slideOff 0.2s linear forwards;
+    }
+    .toggle:checked + .label .ball{
+        animation: slideOn 0.2s linear forwards;
+    }
+    
+    
+    @keyframes slideOn{
+        100%{
+            transform: translateX(30px) scale(1);
+        }
+        
+    }
+    @keyframes slideOff{
+        0%{
+            transform: translateX(30px) scale(1);
+        }
+        
+    }
+    :root{
+        
+        --pri-butt-color:rgb(232,228,219);
+        --sec-butt-color:rgb(230,228,224);
+        
+        --pri-eq-color:rgb(209,63,48);
+        --sec-eq-color:rgb(200,84,1);
+        
+        --pri-del-color:rgb(100,114,152);
+        --sec-del-color:rgb(57,129,137);
+        
+        --pri-result-color:rgb(25,31,50);
+        --sec-result-color:white;
+        
+        --pri-buttons-color:rgb(37,45,69);
+        --sec-buttons-color:rgb(212,205,205);
+        
+        --pri-html-color:rgb(59,70,100);
+        --sec-html-color:rgb(231,231,231);
+        
+        --pri-sum-color:white;
+        --sec-sum-color:black;
+        
+        --pri-name-color:white;
+        --sec-name-color:black;
+    }
+#bRESET:hover{
+    background-color:green; 
+}
+#bDEL:hover{
+    background-color:green; 
+}
+#beq:hover{
+    background-color:green; 
+}
+#b1:hover{
+    background-color:green; 
+}
+#b2:hover{
+    background-color:green; 
+}
+#b3:hover{
+    background-color:green; 
+}
+#b4:hover{
+    background-color:green; 
+}
+#b5:hover{
+    background-color:green; 
+ }
+ #b6:hover{
+    background-color:green; 
+}
+#b7:hover{
+    background-color:green; 
+}
+#b8:hover{
+    background-color:green; 
+}
+#b9:hover{
+    background-color:green; 
+}
+#b0:hover{
+    background-color:green; 
+}
+#bplus:hover{
+    background-color:green; 
+}
+#bminus:hover{
+    background-color:green; 
+}
+#bmul:hover{
+    background-color:green; 
+}
+#bdiv:hover{
+    background-color:green; 
+}
+#bdot:hover{
+    background-color:green; 
+}
+#bRESET:active{
+    background-color:blue; 
+}
+#bDEL:active{
+    background-color:blue; 
+ }
+ #beq:active{
+     background-color:blue; 
+    }
+    #b1:active{
+        background-color:blue; 
+    }
+    #b2:active{
+        background-color:blue; 
+    }
+    #b3:active{
+        background-color:blue; 
+    }
+    #b4:active{
+        background-color:blue; 
+    }
+    #b5:active{
+        background-color:blue; 
+    }
+    #b6:active{
+        background-color:blue; 
+    }
+    #b7:active{
+        background-color:blue; 
+    }
+    #b8:active{
+        background-color:blue; 
+    }
+    #b9:active{
+        background-color:blue; 
+    }
+    #b0:active{
+        background-color:blue; 
+    }
+    #bplus:active{
+        background-color:blue; 
+    }
+    #bminus:active{
+        background-color:blue; 
+    }
+    #bmul:active{
+    background-color:blue; 
+}
+#bdiv:active{
+    background-color:blue; 
+}
+#bdot:active{
+    background-color:blue; 
+}
+@media(max-width:410px){
+     #all{
+        width:300px;
+     }
+     .label{
+        margin-left:243px;
+     }
+}
+
+ 
+
