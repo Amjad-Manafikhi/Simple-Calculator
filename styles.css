@@ -158,7 +158,6 @@ html{
       }
 
 button:active{
-    visibility: hidden;
     background-color:blue !important; 
 }
 .pressed{
