@@ -5,28 +5,53 @@ let vis=0;
 let eqbutton=0;
 
 document.querySelector("body").addEventListener('keydown',(e) => {
-    if(e.key==='1'){b1();}
-    else if(e.key==='1'){eqbutton=0;b1();}
-    else if(e.key==='2'){eqbutton=0;b2();}
-    else if(e.key==='3'){eqbutton=0;b3();}
-    else if(e.key==='4'){eqbutton=0;b4();}
-    else if(e.key==='5'){eqbutton=0;b5();}
-    else if(e.key==='6'){eqbutton=0;b6();}
-    else if(e.key==='7'){eqbutton=0;b7();}
-    else if(e.key==='8'){eqbutton=0;b8();}
-    else if(e.key==='9'){eqbutton=0;b9();}
-    else if(e.key==='0'){eqbutton=0;b0();}
-    else if(e.key==='+'){eqbutton=0;bplus();}
-    else if(e.key==='-'){eqbutton=0;bminus();}
-    else if(e.key==='*'){eqbutton=0;bmul();}
-    else if(e.key==='/'){eqbutton=0;bdiv();}
-    else if(e.key==='.'){eqbutton=0;bdot();}
-    else if(e.key==='='){eqbutton=1;beq();}
-    else if(e.key==='Enter'){eqbutton=1;beq();}
-    else if(e.key==='Backspace'&&eqbutton===0){eqbutton=0;bDEL();}
-    else if(e.key==='Delete'){eqbutton=0;bRESET();}
+  
+    if(e.key==='1'){eqbutton=0;b1();document.getElementById('b1').classList.add('pressed');}
+    else if(e.key==='2'){eqbutton=0;b2();document.getElementById('b2').classList.add('pressed');}
+    else if(e.key==='3'){eqbutton=0;b3();document.getElementById('b3').classList.add('pressed');}
+    else if(e.key==='4'){eqbutton=0;b4();document.getElementById('b4').classList.add('pressed');}
+    else if(e.key==='5'){eqbutton=0;b5();document.getElementById('b5').classList.add('pressed');}
+    else if(e.key==='6'){eqbutton=0;b6();document.getElementById('b6').classList.add('pressed');}
+    else if(e.key==='7'){eqbutton=0;b7();document.getElementById('b7').classList.add('pressed');}
+    else if(e.key==='8'){eqbutton=0;b8();document.getElementById('b8').classList.add('pressed');}
+    else if(e.key==='9'){eqbutton=0;b9();document.getElementById('b9').classList.add('pressed');}
+    else if(e.key==='0'){eqbutton=0;b0();document.getElementById('b0').classList.add('pressed');}
+    else if(e.key==='+'){eqbutton=0;bplus();document.getElementById('bplus').classList.add('pressed');}
+    else if(e.key==='-'){eqbutton=0;bminus();document.getElementById('bminus').classList.add('pressed');}
+    else if(e.key==='*'){eqbutton=0;bmul();document.getElementById('bmul').classList.add('pressed');}
+    else if(e.key==='/'){eqbutton=0;bdiv();document.getElementById('bdiv').classList.add('pressed');}
+    else if(e.key==='.'){eqbutton=0;bdot();document.getElementById('bdot').classList.add('pressed');}
+    else if(e.key==='='){eqbutton=1;beq();document.getElementById('beq').classList.add('pressed');}
+    else if(e.key==='Enter'){eqbutton=1;beq();document.getElementById('beq').classList.add('pressed');}
+    else if(e.key==='Backspace'&&eqbutton===0){eqbutton=0;bDEL();document.getElementById('bDEL').classList.add('pressed');}
+    else if(e.key==='Delete'){eqbutton=0;bRESET();document.getElementById('bRESET').classList.add('pressed');}
+    
 
 });
+document.querySelector("body").addEventListener('keyup',(e) => {
+    if(e.key==='1'){document.getElementById('b1').classList.remove('pressed');}
+    else if(e.key==='2'){document.getElementById('b2').classList.remove('pressed');}
+    else if(e.key==='3'){document.getElementById('b3').classList.remove('pressed');}
+    else if(e.key==='4'){document.getElementById('b4').classList.remove('pressed');}
+    else if(e.key==='5'){document.getElementById('b5').classList.remove('pressed');}
+    else if(e.key==='6'){document.getElementById('b6').classList.remove('pressed');}
+    else if(e.key==='7'){document.getElementById('b7').classList.remove('pressed');}
+    else if(e.key==='8'){document.getElementById('b8').classList.remove('pressed');}
+    else if(e.key==='9'){document.getElementById('b9').classList.remove('pressed');}
+    else if(e.key==='0'){document.getElementById('b0').classList.remove('pressed');}
+    else if(e.key==='+'){document.getElementById('bplus').classList.remove('pressed');}
+    else if(e.key==='-'){document.getElementById('bminus').classList.remove('pressed');}
+    else if(e.key==='*'){edocument.getElementById('bmul').classList.remove('pressed');}
+    else if(e.key==='/'){document.getElementById('bdiv').classList.remove('pressed');}
+    else if(e.key==='.'){document.getElementById('bdot').classList.remove('pressed');}
+    else if(e.key==='='){document.getElementById('beq').classList.remove('pressed');}
+    else if(e.key==='Enter'){document.getElementById('beq').classList.remove('pressed');}
+    else if(e.key==='Backspace'&&eqbutton===0){document.getElementById('bDEL').classList.remove('pressed');}
+    else if(e.key==='Delete'){document.getElementById('bRESET').classList.remove('pressed');}
+    
+
+});
+
 document.getElementById('b1').addEventListener('click',b1);
 document.getElementById('b2').addEventListener('click',b2);
 document.getElementById('b3').addEventListener('click',b3);

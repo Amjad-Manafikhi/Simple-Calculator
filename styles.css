@@ -158,7 +158,11 @@ html{
       }
 
 button:active{
+    visibility: hidden;
     background-color:blue !important; 
+}
+.pressed{
+    background-color:blue !important;
 }
 
 @media(max-width:410px){
