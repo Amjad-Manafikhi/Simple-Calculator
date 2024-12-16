@@ -1,4 +1,4 @@
-let sum="";
+let sum="0";
 let sumall=0;
 let op="&";
 let vis=0;
@@ -263,7 +263,7 @@ function beq() {
         else if(op=='*'){sumall*=q;}
         else if(op=='/'){sumall/=q;}
     }
-    sum="";
+    sum="0";
     let w=numberWithCommas(sumall);
     if(w=="NaN"){w="Error";alert("check your equations and reset the calculator");}
     document.getElementById('sum').textContent=w;
@@ -271,7 +271,7 @@ function beq() {
 };
 function bRESET() {
     eqbutton=0;
-    sum="";
+    sum="0";
     sumall=0;
     op='&';
     document.getElementById('sum').textContent='0';
