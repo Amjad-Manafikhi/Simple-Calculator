@@ -28,7 +28,6 @@ document.querySelector("body").addEventListener('keydown',(e) => {
 
 });
 document.getElementById('b1').addEventListener('click',b1);
-document.getElementById('b1').addEventListener('click',b1);
 document.getElementById('b2').addEventListener('click',b2);
 document.getElementById('b3').addEventListener('click',b3);
 document.getElementById('b4').addEventListener('click',b4);
@@ -69,6 +68,7 @@ function numberWithCommas(x) {
 }
 
  function b1() {
+    if(document.getElementById('sum').textContent.length>=35)return;
     eqbutton=0;
     let x='1';
     sum+=x;
@@ -76,6 +76,7 @@ function numberWithCommas(x) {
     
 };
 function b2() {
+    if(document.getElementById('sum').textContent.length>=35)return;
     eqbutton=0;
     let x='2';
     sum+=x;
@@ -83,6 +84,7 @@ function b2() {
     
 };
 function b3() {
+    if(document.getElementById('sum').textContent.length>=35)return;
     eqbutton=0;
     let x='3';  
     sum+=x;
@@ -90,6 +92,7 @@ function b3() {
 };
     
 function b4() {
+    if(document.getElementById('sum').textContent.length>=35)return;
     eqbutton=0;
     let x='4';
     sum+=x;
@@ -97,6 +100,7 @@ function b4() {
     
 };
 function b5() {
+    if(document.getElementById('sum').textContent.length>=35)return;
     eqbutton=0;
     let x='5';
     sum+=x;
@@ -104,6 +108,7 @@ function b5() {
     
 };
 function b6() {
+    if(document.getElementById('sum').textContent.length>=35)return;
     eqbutton=0;
     let x='6';
     sum+=x;
@@ -111,6 +116,7 @@ function b6() {
     
 };
 function b7()  {
+    if(document.getElementById('sum').textContent.length>=35)return;
     eqbutton=0;
     let x='7';
     sum+=x;
@@ -118,6 +124,7 @@ function b7()  {
     
 };
 function b8() {
+    if(document.getElementById('sum').textContent.length>=35)return;
     eqbutton=0;
     let x='8';
     sum+=x;
@@ -125,6 +132,7 @@ function b8() {
     
 };
 function b9() {
+    if(document.getElementById('sum').textContent.length>=35)return;
     eqbutton=0;
     let x='9';
     sum+=x;
@@ -133,6 +141,7 @@ function b9() {
     
 };
 function b0() {
+    if(document.getElementById('sum').textContent.length>=35)return;
     eqbutton=0;
     let x='0';
     sum+=x;
@@ -140,6 +149,7 @@ function b0() {
     
 };
 function bdot() {
+    if(document.getElementById('sum').textContent.length>=35)return;
     eqbutton=0;
     let x='.';
     sum+=x;
