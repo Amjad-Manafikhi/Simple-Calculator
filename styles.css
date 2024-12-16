@@ -5,9 +5,11 @@ html{
 #all{
     display: flex;
     margin: auto;
+    margin-top:20px;
     width: 400px;
     height: auto;
     flex-direction: column;
+
 
     
 }
