@@ -150,20 +150,20 @@ html{
         --pri-name-color:white;
         --sec-name-color:black;
     }
-    @media (hover: hover) {
+    /*@media (hover: hover) {
         
         button:hover { 
             background-color:green !important;
         }
         
       
-      }
+      }*/
 
 button:active{
-    background-color:blue !important; 
+    background-color:rgb(120, 120, 120) !important; 
 }
 .pressed{
-    background-color:blue !important;
+    background-color:rgb(120, 120, 120) !important;
 }
 
 @media(max-width:410px){
