@@ -3,6 +3,7 @@ let sumall=0;
 let op="&";
 let vis=0;
 let eqbutton=0;
+let dotCount=0;
 
 document.querySelector("body").addEventListener('keydown',(e) => {
   
@@ -41,7 +42,7 @@ document.querySelector("body").addEventListener('keyup',(e) => {
     else if(e.key==='0'){document.getElementById('b0').classList.remove('pressed');}
     else if(e.key==='+'){document.getElementById('bplus').classList.remove('pressed');}
     else if(e.key==='-'){document.getElementById('bminus').classList.remove('pressed');}
-    else if(e.key==='*'){edocument.getElementById('bmul').classList.remove('pressed');}
+    else if(e.key==='*'){document.getElementById('bmul').classList.remove('pressed');}
     else if(e.key==='/'){document.getElementById('bdiv').classList.remove('pressed');}
     else if(e.key==='.'){document.getElementById('bdot').classList.remove('pressed');}
     else if(e.key==='='){document.getElementById('beq').classList.remove('pressed');}
@@ -78,7 +79,7 @@ function numberWithCommas(x) {
     let w= x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     
     let decimalIndex = w.indexOf('.');
-
+    
     // If there is a decimal point, remove commas after it
     if (decimalIndex !== -1) {
         let integerPart = w.slice(0, decimalIndex); // Part before the decimal
@@ -87,6 +88,16 @@ function numberWithCommas(x) {
         decimalPart = decimalPart.replace(/,/g, "");
         // Rebuild the string
         w = integerPart + decimalPart;
+    }
+    if(w[0]==='0'&&w.length>1&&w[1]!='.'){
+        let first=w.slice(0,1);
+        let sec=w.slice(1);
+        console.log(first);
+        console.log(sec);
+        w=sec;
+        first=sum.slice(0,1);
+        sec=sum.slice(1);
+        sum=sec;
     }
     
     return w;
@@ -166,7 +177,7 @@ function b9() {
     
 };
 function b0() {
-    if(document.getElementById('sum').textContent.length>=31)return;
+    if(document.getElementById('sum').textContent.length>=31||sum==='0')return;
     eqbutton=0;
     let x='0';
     sum+=x;
@@ -174,11 +185,12 @@ function b0() {
     
 };
 function bdot() {
-    if(document.getElementById('sum').textContent.length>=31)return;
+    if(document.getElementById('sum').textContent.length>=31||dotCount!=0)return;
     eqbutton=0;
     let x='.';
     sum+=x;
     document.getElementById('sum').textContent=numberWithCommas(sum);
+    dotCount=1;
     
 };
 function bplus() {
@@ -265,6 +277,7 @@ function bRESET() {
     document.getElementById('sum').textContent='0';
     vis=0;
     eqbutton=0;
+    dotCount=0;
 };
 function bDEL(){
     if(eqbutton)return; 
