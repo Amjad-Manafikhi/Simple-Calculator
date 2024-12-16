@@ -5,7 +5,6 @@ let vis=0;
 let eqbutton=0;
 
 document.querySelector("body").addEventListener('keydown',(e) => {
-    console.log(e.key);
     if(e.key==='1'){b1();}
     else if(e.key==='1'){eqbutton=0;b1();}
     else if(e.key==='2'){eqbutton=0;b2();}
@@ -52,7 +51,21 @@ document.getElementById('test').addEventListener('click',changeTheme);
 
 
 function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    let w= x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    
+    let decimalIndex = w.indexOf('.');
+
+    // If there is a decimal point, remove commas after it
+    if (decimalIndex !== -1) {
+        let integerPart = w.slice(0, decimalIndex); // Part before the decimal
+        let decimalPart = w.slice(decimalIndex); // Part after the decimal
+        // Remove commas from the decimal part
+        decimalPart = decimalPart.replace(/,/g, "");
+        // Rebuild the string
+        w = integerPart + decimalPart;
+    }
+    
+    return w;
 }
 
  function b1() {
@@ -115,7 +128,7 @@ function b9() {
     eqbutton=0;
     let x='9';
     sum+=x;
-    console.log(sum);
+    
     document.getElementById('sum').textContent=numberWithCommas(sum);
     
 };
@@ -228,7 +241,8 @@ function bDEL(){
     let n=shownResult.length;
     if(shownResult[n-1]==','){shownResult=shownResult.slice(0,(shownResult.length)-1);}
     if(shownResult.length==0){shownResult="0";}
-    document.getElementById('sum').textContent=shownResult;
+    shownResult=shownResult.replace(/,/g,"");
+    document.getElementById('sum').textContent=numberWithCommas(shownResult);
 
 }   
 function changeTheme(){
