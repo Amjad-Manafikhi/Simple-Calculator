@@ -13,10 +13,13 @@ html{
 
     
 }
+
 #name{
-    margin:10px;
     color:var(--pri-name-color);
-    font-weight: 900;
+    font-family: "League Spartan", serif;
+    font-weight: 700;
+    margin: 10px;
+    font-size:20px;
 
 }
 #result{
